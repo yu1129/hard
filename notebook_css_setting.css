@@ -1,0 +1,42 @@
+.card-bundle{
+    --width: 100%;
+    --each-width: calc(var(--width)/12);
+    width: var(--width);
+    display: flex;
+    flex-wrap: wrap;
+}
+.row-cols-2 .col{
+    --column: 2;
+    width: calc(var(--width)/var(--column))!important;
+    padding: 5px;
+    box-sizing: border-box;
+}
+.col-5{
+    --inner-count: 5;
+    width: calc(var(--each-width)*var(--inner-count))!important;
+}
+.col-7{
+    --inner-count: 7;
+    width: calc(var(--each-width)*var(--inner-count))!important;
+}
+.file-url{
+    display: inline-block;
+}
+.card-wrap{
+    display: flex;
+    flex-wrap: nowrap;
+}
+.img-bundle{
+    height: 80px;
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.language-icon{
+    width: 70%;
+}
+.card-body{
+    display: flex;
+    align-items: center;
+}
