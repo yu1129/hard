@@ -1,19 +1,20 @@
 .card-bundle{
     --width: 100%;
     --each-width: calc(var(--width)/12);
-    width: var(--width);
+    width: var(--width)!important;
     display: flex;
     flex-wrap: wrap;
 }
-.row-cols-2 .col{
-    --column: 2;
-    width: calc(var(--width)/var(--column))!important;
+[class*="row-cols-"] .col{
+    --column: 1;
+    width: calc(var(--width)/var(--column)) !important;
     padding: 5px;
-    box-sizing: border-box;
-}
+    box-sizing: border-box!important;
+    }
 .col-5{
     --inner-count: 5;
     width: calc(var(--each-width)*var(--inner-count))!important;
+    
 }
 .col-7{
     --inner-count: 7;
@@ -21,10 +22,15 @@
 }
 .file-url{
     display: inline-block;
+    border: 1px solid #ccc;
+    border-radius: 20px;
 }
 .card-wrap{
     display: flex;
     flex-wrap: nowrap;
+}
+.file-url, .card-wrap{
+    width: var(--width)!important;
 }
 .img-bundle{
     height: 80px;
@@ -34,9 +40,33 @@
     align-items: center;
 }
 .language-icon{
-    width: 70%;
+    width: 40%;
 }
 .card-body{
     display: flex;
     align-items: center;
+}
+.card-title{
+    margin-top: 0px!important;
+    margin-bottom: 0px!important;
+}
+@media screen and (min-width: 540px) {
+    .row-cols-sm-1 .col{
+        --column: 1;
+    }
+}
+@media screen and (min-width: 720px) {
+    .row-cols-md-2 .col{
+        --column: 2;
+    }
+}
+@media screen and (min-width: 960px) {
+    .row-cols-lg-3 .col{
+        --column: 3;
+    }
+}
+@media screen and (min-width: 1140px) {
+    .row-cols-xl-4 .col{
+        --column: 4;
+    }
 }
