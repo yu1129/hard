@@ -24,6 +24,7 @@
     display: inline-block;
     border: 1px solid #ccc;
     border-radius: 20px;
+    text-decoration: none!important;
 }
 .card-wrap{
     display: flex;
@@ -50,6 +51,13 @@
     margin-top: 0px!important;
     margin-bottom: 0px!important;
 }
+.card-title:hover .octicon{
+    display: none!important;
+}
+.notfinished .file-url, .notfinished .language-icon{
+    background-color: #F1E1FF;
+    pointer-events: none;
+}
 @media screen and (min-width: 540px) {
     .row-cols-sm-1 .col{
         --column: 1;
@@ -63,10 +71,5 @@
 @media screen and (min-width: 960px) {
     .row-cols-lg-3 .col{
         --column: 3;
-    }
-}
-@media screen and (min-width: 1140px) {
-    .row-cols-xl-4 .col{
-        --column: 4;
     }
 }
